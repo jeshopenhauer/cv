@@ -1,0 +1,168 @@
+\documentclass{report}
+
+\usepackage[top=0.5in, bottom=1in, left=0.8in, right=0.8in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{url}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{pdflscape} % Para una sola página horizontal
+\pagenumbering{gobble}
+
+\begin{document}
+
+% ===================== PÁGINA 1 (VERTICAL) =====================
+\noindent
+\begin{minipage}{0.7\textwidth}
+\vspace{-1cm}
+    {\Large\textbf{Jesús Moral Aranda}}\\
+    \large{
+    \vspace{.1cm}
+    \begin{tikzpicture}[scale=0.2]
+        \draw (0,0) rectangle (2,1.5);
+        \draw (0,1.5) -- (1,0.75) -- (2,1.5);
+    \end{tikzpicture}
+    \hspace{5pt} jesusmoralaranda@outlook.es \quad jesus.moral-aranda@valeo.com}\\
+    +34 675\;94\;54\;75 \\
+    Location: Martos \\ Age: 24
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+    \hspace{3cm}
+    \includegraphics[width=0.6\textwidth]{FOTO CARNET.jpg}
+\end{minipage}
+
+\vspace{0.6cm}
+
+{\Large\textbf{Education}}\\[0.3em]
+
+\begin{minipage}{0.7\textwidth}
+- University of Seville\\
+B.Sc. in Physics (expected 2025).\\
+B.Sc. in Materials Engineering (expected 2025).\\
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+    \raggedleft
+    \includegraphics[width=0.4\textwidth]{us.png}
+\end{minipage}
+
+\vspace{0.3cm}
+
+\begin{minipage}{0.7\textwidth}
+- East China University of Science and Technology (Shanghai, China)\\
+Training in pattern recognition algorithms, artificial intelligence, and advanced materials.\\
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+    \raggedleft
+    \includegraphics[width=0.4\textwidth]{ecust.png}
+\end{minipage}
+
+\vspace{0.4cm}
+
+\begin{minipage}{0.7\textwidth}
+- Gdańsk University of Technology (Gdańsk, Poland) (2024-2025)\\
+Erasmus exchange. Graduate coursework in nanotechnology: quantum chemical computing, quantum mechanics, microscopy techniques, and materials physics.\\
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+    \raggedleft
+    \includegraphics[width=0.4\textwidth]{pg.png}
+\end{minipage}
+
+\vspace{0.6cm}
+
+{\Large\textbf{Skills}}\\[0.3em]
+- English (B2).\\
+- Programming and tools: Python, MATLAB, Linux, LaTeX, basics on HTML, JS, CSS and DB. EPROC, PUMA, SRM, STR, PLM.\\
+- Experience with 3D printing and design (FreeCAD and Fusion 360 Autodesk).\\
+
+\vspace{0.6cm}
+{\Large\textbf{Work Experience}}\\[0.3em]
+- Referee, Spanish Football Federation (3 years).\\
+- Research and physics laboratory assistant, ECUST (Shanghai).\\
+\vspace{.4cm}
+\large{
+- Project Purchasing Trainee, Valeo Martos (5 months).\\
+}
+\newpage
+
+% ===================== PÁGINA 2 (HORIZONTAL - PROYECTOS) =====================
+\begin{landscape}
+
+% Cabecera proyectos
+
+\noindent
+\begin{minipage}[t]{0.58\textwidth}
+    \vspace{-2cm}
+    {\Large\textcolor{red}{jesus.moral-aranda@valeo.com}}\\[0.6em]
+    {\LARGE\bfseries Software development miniprojects at Valeo:}\\[0.4em]
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.38\textwidth}
+\vspace{-2cm}
+    \vspace{0pt}
+    \centering
+    \includegraphics[width=0.6\textwidth]{valeo.png}
+\end{minipage}
+
+\vspace{0.6cm}
+
+% Bloque 1
+{\large\textbf{Purchasing manager autofill tool}}\\[0.3em]
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{purchasing_manager_web.png}\\[0.3em]
+    \small Web interface (main view)
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{eo.png}\\[0.3em]
+   
+\end{minipage}
+
+\vspace{0.3cm}
+\small\url{https://drive.google.com/file/d/1vq88cMLhfT8OmDa8-0zI298sVb57ovTB/view?usp=sharing}
+
+\vspace{0.6cm}
+
+% Bloque 2
+{\large\textbf{Analysis of non-fraudulent contracts}}\\[0.3em]
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{inspector2.png}\\[0.3em]
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{inspector.png}\\[0.3em]
+    
+\end{minipage}
+
+\vspace{0.6cm}
+
+% Bloque 3
+{\large\textbf{VLS AI Working Group: Metaprompts for LEA}}\\[0.3em]
+\small\url{https://drive.google.com/file/d/11MqypvAvkJLRfX2JnZEsxuEvFIKmlL1M/view?usp=sharing}
+
+
+\begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{a.png}\\[0.3em]
+   
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{b.png}\\[0.3em]
+ 
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{dibujo-1.png}\\[0.3em]
+   
+\end{minipage}
+\end{landscape}
+
+\end{document}
