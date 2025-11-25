@@ -395,21 +395,34 @@
                 </div>
             </div>
         </div>
-    <!-- Contact Box -->
-    <div class="contact-box">
-        <h4>Contact Me 💬</h4>
-        <form action="mailto:jesusmoralaranda@outlook.es" method="post" enctype="text/plain">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+ <!-- Contact Box -->
+<div class="contact-box">
+    <h4>Contact Me 💬</h4>
+    <!-- Se eliminan los atributos action, method y enctype y se añade un id -->
+    <form id="contactForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Write your message here" rows="4" required></textarea>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here" rows="4" required></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<!-- Script para limpiar el formulario sin enviarlo -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        // Previene la acción de envío por defecto del formulario
+        event.preventDefault();
+        
+        // Limpia todos los campos del formulario
+        this.reset();
+    });
+</script>
     </div>
         <footer>
             <p>&copy; 2025 Jesús Moral Aranda. All rights reserved.</p>
