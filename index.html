@@ -24,13 +24,80 @@
             margin: 0 auto;
             padding: 20px;
         }
-        
+
         header {
             background: white;
             border-radius: 15px;
             padding: 40px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .header-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
         }
 
         footer {
@@ -110,10 +177,33 @@
 <body>
     <div class="container">
         <header>
-            <h1>Jesús Moral Aranda</h1>
+            <div class="header-content">
+                <h1>Jesús Moral Aranda</h1>
+                <p style="font-size: 1.2em; color: #666;">Physics & Materials Engineering Student | Software Projects</p>
+                <div class="contact-info">
+                    <p>📧 <a href="mailto:jesusmoralaranda@outlook.es">jesusmoralaranda@outlook.es</a></p>
+                    <p>📧 <a href="mailto:jesus.moral-aranda@valeo.com">jesus.moral-aranda@valeo.com</a></p>
+                    <p>📱 +34 675 94 54 75   +33 07 43 32 65 25 </p>
+                    <p>📍 Martos, Spain | Age: 24</p>
+                </div>
+                <a href="cv.pdf" class="download-btn" download>📄 Download CV (PDF)</a>
+            </div>
         </header>
 
-        <!-- Existing Content -->
+        <div class="content-section">
+            <h2>🎓 Education</h2>
+            <!-- Your education content here -->
+        </div>
+
+        <div class="content-section">
+            <h2>💼 Work Experience</h2>
+            <!-- Your work experience content here -->
+        </div>
+
+        <div class="content-section">
+            <h2>🚀 Software Development Projects</h2>
+            <!-- Your project content here -->
+        </div>
 
         <footer>
             <p>&copy; 2025 Jesús Moral Aranda. All rights reserved.</p>
