@@ -179,7 +179,7 @@
             transition: all 0.3s ease;
         }
 
-        .education-item:hover, . work-item:hover, .project-item:hover {
+        .education-item:hover, .work-item:hover, .project-item:hover {
             border-left-color: #6a9955;
             background: rgba(106, 153, 85, 0.05);
             transform: translateX(5px);
@@ -196,7 +196,7 @@
             color: #f0e6c0;
         }
 
-        .education-item h3::before, .work-item h3::before, .project-item h3::before {
+        .education-item h3::before, . work-item h3::before, .project-item h3::before {
             content: "> ";
             color: #6a9955;
         }
@@ -267,13 +267,13 @@
             transform: translateX(5px);
         }
 
-        . skill-category li:before {
+        .skill-category li:before {
             content: "- ";
             color: #6a9955;
             transition: color 0.3s ease;
         }
 
-        . skill-category li:hover:before {
+        .skill-category li:hover:before {
             color: #8bc574;
         }
 
@@ -288,7 +288,7 @@
             background: #1e1e1e;
             padding: 20px;
             border: 1px solid #3e3e42;
-            transition: all 0.3s ease;
+            transition: all 0. 3s ease;
             position: relative;
             overflow: hidden;
         }
@@ -319,7 +319,7 @@
         . project-card img {
             width: 100%;
             max-width: 100%;
-            height: 150px; /* Reducido de 200px a 150px */
+            height: 150px;
             object-fit: contain;
             border: 1px solid #3e3e42;
             margin-bottom: 15px;
@@ -327,16 +327,16 @@
             filter: grayscale(50%) brightness(0.9);
             transition: all 0.3s ease;
             display: block;
-            cursor: pointer; /* Indica que es clickeable */
+            cursor: pointer;
         }
 
-        . project-card img:hover {
+        .project-card img:hover {
             filter: grayscale(0%) brightness(1);
             border-color: #6a9955;
             box-shadow: 0 0 10px rgba(106, 153, 85, 0. 5);
         }
 
-        . project-card h3 {
+        .project-card h3 {
             color: #4ec9b0;
             margin-bottom: 15px;
             transition: all 0.3s ease;
@@ -372,7 +372,7 @@
             padding: 2px 4px;
         }
 
-        .project-link:hover {
+        . project-link:hover {
             border-bottom: 1px solid #ce9178;
             color: #e8ab92;
             background: rgba(206, 145, 120, 0.1);
@@ -385,7 +385,7 @@
             transition: color 0.3s ease;
         }
 
-        . project-link::after {
+        .project-link::after {
             content: "]";
             color: #858585;
             transition: color 0.3s ease;
@@ -406,13 +406,13 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.95);
-            animation: fadeIn 0.3s ease;
         }
 
-        . modal. active {
+        .modal. active {
             display: flex;
             justify-content: center;
             align-items: center;
+            animation: fadeIn 0.3s ease;
         }
 
         @keyframes fadeIn {
@@ -430,7 +430,7 @@
         }
 
         @keyframes zoomIn {
-            from { transform: scale(0. 7); }
+            from { transform: scale(0.7); }
             to { transform: scale(1); }
         }
 
@@ -444,6 +444,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Consolas', monospace;
+            user-select: none;
         }
 
         .modal-close:hover {
@@ -451,7 +452,7 @@
             transform: rotate(90deg);
         }
 
-        .modal-instruction {
+        . modal-instruction {
             position: absolute;
             bottom: 30px;
             left: 50%;
@@ -475,7 +476,7 @@
             border-top-color: #6a9955;
         }
 
-        .contact-box {
+        . contact-box {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -688,7 +689,7 @@
                 <div class="project-card">
                     <h3>Japanese learning page</h3>
                     <p>Web page to help in learning japanese. </p>
-                    <a href="https://kanjilist-git-main-alemxrals-projects. vercel.app/index.html" class="project-link" target="_blank">view page</a>
+                    <a href="https://kanjilist-git-main-alemxrals-projects.vercel.app/index.html" class="project-link" target="_blank">view page</a>
                 </div>
 
                 <div class="project-card">
@@ -697,12 +698,12 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="terminal.png" alt="QsTerminal Trading Interface" class="zoomable-img">
+                    <img src="terminal.png" alt="QsTerminal Trading Interface">
                     <h3>Trading on Polymarket</h3>
-                    <p>Active trader on Polymarket ranking in the top 4% by profitability (1. 3M users)</p>
+                    <p>Active trader on Polymarket ranking in the top 4% by profitability (1.3M users)</p>
                     <a href="https://polymarket.com/@almo" class="project-link" target="_blank">view page</a>
                     <a href="https://www.hashdive.com/Analyze_User? user_address=0xf937dbe9976ac34157b30dd55bdbf248458f6b43&market=Will+Kanye+launch+a+coin+in+February%3F+-+No+%F0%9F%94%B4" class="project-link" target="_blank">analysis</a>
-                    <p>+ Built a production-grade client for Polymarket/Polygon: REST + WebSocket utilities, order-book adapters.  Also collaborating in a fast execution (for automated trading), integrating with a custom system.</p>
+                    <p>+ Built a production-grade client for Polymarket/Polygon: REST + WebSocket utilities, order-book adapters.  Also collaborating in a fast execution (for automated trading), integrating with a custom system. </p>
                 </div>
             </div>
         </div>
@@ -775,7 +776,7 @@
     <!-- MODAL PARA AMPLIAR IMAGEN -->
     <div id="imageModal" class="modal">
         <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modalImage">
+        <img class="modal-content" id="modalImage" alt="Enlarged view">
         <div class="modal-instruction">Click anywhere or press ESC to close</div>
     </div>
 
@@ -786,28 +787,36 @@
             this.reset();
         });
 
-        // Modal para ampliar imagen
+        // Modal para ampliar imagen - TODAS las imágenes dentro de project-card
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         const closeBtn = document.querySelector('.modal-close');
-        const zoomableImages = document.querySelectorAll('. zoomable-img');
+        
+        // Seleccionar TODAS las imágenes dentro de project-card
+        const projectImages = document.querySelectorAll('. project-card img');
+        
+        console.log('Imágenes encontradas:', projectImages. length); // Debug
 
-        // Abrir modal al hacer clic en imagen
-        zoomableImages.forEach(img => {
-            img.addEventListener('click', function() {
+        // Agregar evento click a cada imagen
+        projectImages.forEach((img, index) => {
+            console.log('Añadiendo evento a imagen', index); // Debug
+            img.addEventListener('click', function(e) {
+                console.log('Click en imagen:', this.src); // Debug
+                e.stopPropagation();
                 modal.classList.add('active');
                 modalImg.src = this.src;
             });
         });
 
         // Cerrar modal al hacer clic en X
-        closeBtn.addEventListener('click', function() {
-            modal. classList.remove('active');
+        closeBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            modal.classList.remove('active');
         });
 
-        // Cerrar modal al hacer clic fuera de la imagen
+        // Cerrar modal al hacer clic en el fondo
         modal.addEventListener('click', function(e) {
-            if (e. target === modal) {
+            if (e.target === modal || e.target === modalImg) {
                 modal.classList.remove('active');
             }
         });
