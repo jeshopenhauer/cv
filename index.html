@@ -1,4 +1,4 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,42 +35,64 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            transition: box-shadow 0.3s ease;
         }
 
-        .header-content {
+        header:hover {
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        . header-content {
             flex: 1;
             min-width: 300px;
         }
 
-. project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #eee;
-}
-        
+        . project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+            transition: transform 0.4s ease, filter 0.3s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.08);
+            filter: brightness(1.05);
+        }
 
         h1 {
             color: #667eea;
             font-size: 2.5em;
             margin-bottom: 10px;
+            transition: color 0.3s ease;
         }
 
-        . contact-info {
+        h1:hover {
+            color: #764ba2;
+        }
+
+        .contact-info {
             margin-top: 15px;
             line-height: 1.8;
         }
 
         .contact-info p {
             margin: 5px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info p:hover {
+            transform: translateX(5px);
         }
 
         .contact-info a {
             color: #667eea;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .contact-info a:hover {
+            color: #764ba2;
             text-decoration: underline;
         }
 
@@ -88,8 +110,8 @@
         }
 
         .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
         }
 
         .content-section {
@@ -98,12 +120,12 @@
             padding: 40px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            border: 3px solid transparent;
+            border: 2px solid transparent;
             transition: transform 0.3s ease, box-shadow 0. 3s ease, border-color 0.3s ease;
         }
 
         . content-section:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
             border-color: #667eea;
         }
@@ -114,6 +136,12 @@
             margin-bottom: 20px;
             border-bottom: 3px solid #667eea;
             padding-bottom: 10px;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        . content-section:hover h2 {
+            color: #764ba2;
+            border-color: #764ba2;
         }
 
         .education-item, .work-item, .project-item {
@@ -122,24 +150,35 @@
             background: #f8f9fa;
             border-radius: 10px;
             border-left: 4px solid #667eea;
-            transition: border-left-width 0.3s ease, border-left-color 0.3s ease, background 0.3s ease;
+            transition: border-left-width 0.3s ease, border-left-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
         }
 
-        .education-item:hover, . work-item:hover, .project-item:hover {
+        .education-item:hover, .work-item:hover, .project-item:hover {
             border-left-width: 8px;
             border-left-color: #764ba2;
             background: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
         .education-item h3, .work-item h3, .project-item h3 {
             color: #333;
             margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .education-item:hover h3, .work-item:hover h3, .project-item:hover h3 {
+            color: #667eea;
         }
 
         .education-item p, .work-item p, .project-item p {
             color: #666;
             margin: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .education-item:hover p, .work-item:hover p, .project-item:hover p {
+            color: #333;
         }
 
         .skills-grid {
@@ -149,12 +188,12 @@
             margin-top: 20px;
         }
 
-        . skill-category {
+        .skill-category {
             background: #f8f9fa;
             padding: 20px;
             border-radius: 10px;
             border-left: 4px solid #764ba2;
-            transition: border-left-width 0.3s ease, border-left-color 0.3s ease, background 0.3s ease;
+            transition: border-left-width 0.3s ease, border-left-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
             cursor: pointer;
         }
 
@@ -162,14 +201,21 @@
             border-left-width: 8px;
             border-left-color: #667eea;
             background: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
         }
 
         .skill-category h3 {
             color: #764ba2;
             margin-bottom: 10px;
+            transition: color 0.3s ease;
         }
 
-        .skill-category ul {
+        . skill-category:hover h3 {
+            color: #667eea;
+        }
+
+        . skill-category ul {
             list-style: none;
             padding-left: 0;
         }
@@ -177,12 +223,26 @@
         .skill-category li {
             padding: 5px 0;
             color: #666;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .skill-category:hover li {
+            color: #333;
+        }
+
+        .skill-category li:hover {
+            transform: translateX(5px);
         }
 
         .skill-category li:before {
             content: "▹ ";
             color: #764ba2;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .skill-category:hover li:before {
+            color: #667eea;
         }
 
         .projects-grid {
@@ -197,22 +257,37 @@
             padding: 25px;
             border-radius: 10px;
             border-top: 4px solid #667eea;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-top-width 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            background: #ffffff;
+            border-top-width: 6px;
         }
 
-        .project-card h3 {
+        . project-card h3 {
             color: #667eea;
             margin-bottom: 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
-        .project-card p {
+        .project-card:hover h3 {
+            color: #764ba2;
+            transform: translateX(3px);
+        }
+
+        . project-card p {
             color: #666;
             margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        . project-card:hover p {
+            color: #333;
         }
 
         .project-link {
@@ -221,10 +296,28 @@
             font-weight: bold;
             display: inline-block;
             margin-top: 10px;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
         }
 
         .project-link:hover {
-            text-decoration: underline;
+            color: #667eea;
+            transform: translateX(3px);
+        }
+
+        . project-link:hover::after {
+            width: 100%;
         }
 
         footer {
@@ -232,6 +325,11 @@
             padding: 30px;
             color: white;
             margin-top: 30px;
+            transition: opacity 0.3s ease;
+        }
+
+        footer:hover {
+            opacity: 0.9;
         }
 
         @media (max-width: 768px) {
@@ -249,25 +347,36 @@
             }
         }
 
-           
-        . contact-box {
+        .contact-box {
             position: fixed;
             bottom: 20px;
             right: 20px;
             width: 300px;
             background: white;
-            border: 1px solid #ddd;
+            border: 2px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0. 2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             padding: 20px;
             z-index: 1000;
             font-family: 'Segoe UI', Tahoma, sans-serif;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        . contact-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            border-color: #667eea;
         }
 
         .contact-box h4 {
             margin-bottom: 15px;
             color: #764ba2;
             font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        . contact-box:hover h4 {
+            color: #667eea;
         }
 
         . contact-box form label {
@@ -276,20 +385,40 @@
             font-weight: bold;
             color: #333;
             font-size: 0.9em;
+            transition: color 0.3s ease;
         }
 
-        . contact-box form input[type="text"],
+        .contact-box form label:hover {
+            color: #667eea;
+        }
+
+        .contact-box form input[type="text"],
         .contact-box form input[type="email"],
         .contact-box form textarea {
             width: 100%;
             padding: 10px;
             margin: 5px 0 10px;
-            border: 1px solid #ddd;
+            border: 2px solid #ddd;
             border-radius: 5px;
             font-size: 0.9em;
+            transition: border-color 0.3s ease, box-shadow 0. 3s ease;
         }
 
-        . contact-box form button {
+        .contact-box form input[type="text"]:focus,
+        .contact-box form input[type="email"]:focus,
+        .contact-box form textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-box form input[type="text"]:hover,
+        .contact-box form input[type="email"]:hover,
+        .contact-box form textarea:hover {
+            border-color: #764ba2;
+        }
+
+        .contact-box form button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
@@ -297,11 +426,17 @@
             border-radius: 5px;
             font-size: 1em;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
         }
 
         .contact-box form button:hover {
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.5);
+        }
+
+        .contact-box form button:active {
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -312,7 +447,7 @@
                 <h1>Jesús Moral Aranda</h1>
                 <p style="font-size: 1.2em; color: #666;">Physics & Materials Engineering  | Software Projects</p>
                 <div class="contact-info">
-                    <p> <a href="mailto:jesusmoralaranda10@gmail.com">jesusmoralaranda10@gmail.com</a></p>
+                    <p> <a href="mailto:jesusmoralaranda10@gmail. com">jesusmoralaranda10@gmail.com</a></p>
                     <p> +33 07 43 32 65 25 </p>
                     <p>📍 Alcaudete, Spain | Age: 24</p>
                 </div>
@@ -332,12 +467,12 @@
             <div class="education-item">
                 <h3>Gdańsk University of Technology, Poland</h3>
                 <p><strong>Erasmus Exchange Program</strong> (2024-2025)</p>
-                <p>Graduate coursework in nanotechnology: quantum chemical computing, quantum mechanics, microscopy techniques, and materials physics. </p>
+                <p>Graduate coursework in nanotechnology: quantum chemical computing, quantum mechanics, microscopy techniques, and materials physics.</p>
             </div>
 
             <div class="education-item">
                 <h3>East China University of Science and Technology, Shanghai</h3>
-                <p>Training in pattern recognition algorithms, artificial intelligence, and advanced materials. </p>
+                <p>Training in pattern recognition algorithms, artificial intelligence, and advanced materials.</p>
             </div>
         </div>
 
@@ -347,7 +482,7 @@
             <div class="work-item">
                 <h3>Project Buyer Trainee - Valeo Martos</h3>
                 <p><strong>Duration:</strong> 5 months</p>
-                <p>Between others: developing software solutions for purchasing management and contract analysis.  Contributed to AI working groups where I focused on process automation. </p>
+                <p>Between others: developing software solutions for purchasing management and contract analysis. Contributed to AI working groups where I focused on process automation. </p>
             </div>
 
             <div class="work-item">
@@ -379,7 +514,7 @@
                 <div class="project-card">
                     <h3>Analysis of Non-Fraudulent Contracts</h3>
                     <p>Created an analysis tool for contract validation and inspection.</p>
-                        <a href="https://drive.google. com/file/d/17K6Fm2p2RJRtMZANzL0uJHsXqDitqMs6/view?usp=sharing" class="project-link" target="_blank">View page →</a>
+                        <a href="https://drive. google.com/file/d/17K6Fm2p2RJRtMZANzL0uJHsXqDitqMs6/view?usp=sharing" class="project-link" target="_blank">View page →</a>
                     
                 </div>
 
@@ -398,7 +533,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Japanes learning page</h3>
-                    <p>Web page to help in learning japanese.</p>
+                    <p>Web page to help in learning japanese. </p>
                     <a href="https://kanjilist-git-main-alemxrals-projects.vercel.app/index.html" class="project-link" target="_blank">View Page →</a>
                      
                     
@@ -412,12 +547,12 @@
 <div class="project-card">
     <img src="terminal.png" alt="Imagen de la terminal">
     <h3>Trading on Polymarket</h3>
-    <p>Active trader on Polymarket ranking in the top 4% by profitability (1. 3M users) </p>
+    <p>Active trader on Polymarket ranking in the top 4% by profitability (1.3M users) </p>
     <a href="https://polymarket.com/@almo" class="project-link" target="_blank">View Page →</a>
     
-    <a href="https://www.hashdive.com/Analyze_User? user_address=0xf937dbe9976ac34157b30dd55bdbf248458f6b43&market=Will+Kanye+launch+a+coin+in+February%3F+-+No+%F0%9F%94%B4" class="project-link" target="_blank">View Analysis →</a>
+    <a href="https://www.hashdive.com/Analyze_User? user_address=0xf937dbe9976ac34157b30dd55bdbf248458f6b43&market=Will+Kanye+launch+a+coin+in+February%3F+-+No+%F0%9F%94%B4" class="project-link" target="_blank">Performance Analytics →</a>
     <p> </p>
-    <p>+ Built a production-grade client for Polymarket/Polygon :REST+ WebSocket utilities, order-book adapters.  Also collaborating in a fast execution (for automated trading), integrating with a custom backend.</p>
+    <p>+ Built a production-grade client for Polymarket/Polygon :REST+ WebSocket utilities, order-book adapters.  Also collaborating in a fast execution (for automated trading), integrating with a custom Exchange contract to perform swaps between binary outcome tokens.  </p>
 </div>
 
 
@@ -494,7 +629,7 @@
 
 <!-- Script para limpiar el formulario sin enviarlo -->
 <script>
-    document.getElementById('contactForm'). addEventListener('submit', function(event) {
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
         // Previene la acción de envío por defecto del formulario
         event.preventDefault();
         
