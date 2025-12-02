@@ -1,4 +1,4 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
             padding: 20px;
         }
 
-        . container {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -101,7 +101,7 @@
             color: #6ee7d2;
         }
 
-        . contact-info a:hover::after {
+        .contact-info a:hover::after {
             width: 100%;
         }
 
@@ -161,7 +161,7 @@
             transition: all 0.3s ease;
         }
 
-        . content-section:hover h2 {
+        .content-section:hover h2 {
             color: #72b5e6;
             border-bottom-color: #6a9955;
         }
@@ -179,7 +179,7 @@
             transition: all 0.3s ease;
         }
 
-        .education-item:hover, .work-item:hover, .project-item:hover {
+        .education-item:hover, . work-item:hover, .project-item:hover {
             border-left-color: #6a9955;
             background: rgba(106, 153, 85, 0.05);
             transform: translateX(5px);
@@ -267,13 +267,13 @@
             transform: translateX(5px);
         }
 
-        .skill-category li:before {
+        . skill-category li:before {
             content: "- ";
             color: #6a9955;
             transition: color 0.3s ease;
         }
 
-        .skill-category li:hover:before {
+        . skill-category li:hover:before {
             color: #8bc574;
         }
 
@@ -290,7 +290,7 @@
             border: 1px solid #3e3e42;
             transition: all 0.3s ease;
             position: relative;
-            overflow: hidden; /* IMPORTANTE: evita que la imagen se salga */
+            overflow: hidden;
         }
 
         .project-card::before {
@@ -317,24 +317,26 @@
         }
 
         . project-card img {
-            width: 100%; /* Ocupa todo el ancho del contenedor */
-            max-width: 100%; /* No se sale del contenedor */
-            height: 200px;
-            object-fit: contain; /* Muestra la imagen completa sin cortar */
+            width: 100%;
+            max-width: 100%;
+            height: 150px; /* Reducido de 200px a 150px */
+            object-fit: contain;
             border: 1px solid #3e3e42;
             margin-bottom: 15px;
-            background: #000; /* Fondo negro para el espacio vacío */
+            background: #000;
             filter: grayscale(50%) brightness(0.9);
-            transition: all 0. 3s ease;
-            display: block; /* Elimina espacio extra debajo de la imagen */
+            transition: all 0.3s ease;
+            display: block;
+            cursor: pointer; /* Indica que es clickeable */
         }
 
-        .project-card:hover img {
+        . project-card img:hover {
             filter: grayscale(0%) brightness(1);
             border-color: #6a9955;
+            box-shadow: 0 0 10px rgba(106, 153, 85, 0. 5);
         }
 
-        .project-card h3 {
+        . project-card h3 {
             color: #4ec9b0;
             margin-bottom: 15px;
             transition: all 0.3s ease;
@@ -370,7 +372,7 @@
             padding: 2px 4px;
         }
 
-        . project-link:hover {
+        .project-link:hover {
             border-bottom: 1px solid #ce9178;
             color: #e8ab92;
             background: rgba(206, 145, 120, 0.1);
@@ -392,6 +394,71 @@
         .project-link:hover::before,
         .project-link:hover::after {
             color: #ce9178;
+        }
+
+        /* MODAL PARA AMPLIAR IMAGEN */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            animation: fadeIn 0.3s ease;
+        }
+
+        . modal. active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        . modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border: 2px solid #6a9955;
+            box-shadow: 0 0 50px rgba(106, 153, 85, 0.5);
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0. 7); }
+            to { transform: scale(1); }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            color: #6a9955;
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Consolas', monospace;
+        }
+
+        .modal-close:hover {
+            color: #8bc574;
+            transform: rotate(90deg);
+        }
+
+        .modal-instruction {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #858585;
+            font-family: 'Consolas', monospace;
+            font-size: 14px;
         }
 
         footer {
@@ -426,13 +493,13 @@
             transform: translateY(-3px);
         }
 
-        . contact-box h4 {
+        .contact-box h4 {
             margin-bottom: 15px;
             color: #569cd6;
             transition: color 0.3s ease;
         }
 
-        . contact-box:hover h4 {
+        .contact-box:hover h4 {
             color: #72b5e6;
         }
 
@@ -521,6 +588,12 @@
                 width: calc(100% - 40px);
                 left: 20px;
                 right: 20px;
+            }
+
+            .modal-close {
+                top: 20px;
+                right: 20px;
+                font-size: 40px;
             }
         }
     </style>
@@ -615,7 +688,7 @@
                 <div class="project-card">
                     <h3>Japanese learning page</h3>
                     <p>Web page to help in learning japanese. </p>
-                    <a href="https://kanjilist-git-main-alemxrals-projects.vercel.app/index.html" class="project-link" target="_blank">view page</a>
+                    <a href="https://kanjilist-git-main-alemxrals-projects. vercel.app/index.html" class="project-link" target="_blank">view page</a>
                 </div>
 
                 <div class="project-card">
@@ -624,7 +697,7 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="terminal.png" alt="QsTerminal Trading Interface">
+                    <img src="terminal.png" alt="QsTerminal Trading Interface" class="zoomable-img">
                     <h3>Trading on Polymarket</h3>
                     <p>Active trader on Polymarket ranking in the top 4% by profitability (1. 3M users)</p>
                     <a href="https://polymarket.com/@almo" class="project-link" target="_blank">view page</a>
@@ -694,16 +767,57 @@
             </form>
         </div>
 
-        <script>
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-                this.reset();
-            });
-        </script>
-
         <footer>
             <p>© 2025 Jesús Moral Aranda. All rights reserved.</p>
         </footer>
     </div>
+
+    <!-- MODAL PARA AMPLIAR IMAGEN -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-instruction">Click anywhere or press ESC to close</div>
+    </div>
+
+    <script>
+        // Formulario de contacto
+        document. getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            this.reset();
+        });
+
+        // Modal para ampliar imagen
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.modal-close');
+        const zoomableImages = document.querySelectorAll('. zoomable-img');
+
+        // Abrir modal al hacer clic en imagen
+        zoomableImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.classList.add('active');
+                modalImg.src = this.src;
+            });
+        });
+
+        // Cerrar modal al hacer clic en X
+        closeBtn.addEventListener('click', function() {
+            modal. classList.remove('active');
+        });
+
+        // Cerrar modal al hacer clic fuera de la imagen
+        modal.addEventListener('click', function(e) {
+            if (e. target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Cerrar modal con tecla ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
