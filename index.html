@@ -284,13 +284,16 @@
             margin-top: 20px;
         }
 
-        .project-card {
-            background: #1e1e1e;
-            padding: 20px;
-            border: 1px solid #3e3e42;
-            transition: all 0. 3s ease;
-            position: relative;
-        }
+. project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Cambiado de 'cover' a 'contain' */
+    border: 1px solid #3e3e42;
+    margin-bottom: 15px;
+    background: #000; /* Fondo negro para rellenar el espacio */
+    filter: grayscale(50%) brightness(0.9);
+    transition: all 0. 3s ease;
+}
 
         .project-card::before {
             content: '';
