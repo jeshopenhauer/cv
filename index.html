@@ -30,12 +30,23 @@
             border: 1px solid #3e3e42;
             padding: 30px;
             margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        header:hover {
+            border-color: #6a9955;
+            box-shadow: 0 0 15px rgba(106, 153, 85, 0.1);
         }
 
         h1 {
             color: #d4d4d4;
             font-size: 2em;
             margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        header:hover h1 {
+            color: #ffffff;
         }
 
         h1::before {
@@ -47,24 +58,51 @@
             color: #858585;
             font-size: 1em;
             margin-bottom: 15px;
+            transition: color 0.3s ease;
         }
 
-        . contact-info {
+        header:hover .subtitle {
+            color: #a0a0a0;
+        }
+
+        .contact-info {
             color: #c0c0c0;
             line-height: 1.8;
         }
 
         .contact-info p {
             margin: 5px 0;
+            transition: transform 0.2s ease;
+        }
+
+        .contact-info p:hover {
+            transform: translateX(5px);
         }
 
         .contact-info a {
             color: #4ec9b0;
             text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .contact-info a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4ec9b0;
+            transition: width 0.3s ease;
         }
 
         .contact-info a:hover {
-            text-decoration: underline;
+            color: #6ee7d2;
+        }
+
+        .contact-info a:hover::after {
+            width: 100%;
         }
 
         .download-btn {
@@ -75,12 +113,30 @@
             border: 1px solid #3e3e42;
             text-decoration: none;
             margin-top: 15px;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(106, 153, 85, 0.1);
+            transition: left 0.3s ease;
+        }
+
+        .download-btn:hover::before {
+            left: 0;
         }
 
         .download-btn:hover {
-            background: #3e3e42;
             border-color: #6a9955;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .content-section {
@@ -88,6 +144,12 @@
             border: 1px solid #3e3e42;
             padding: 30px;
             margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .content-section:hover {
+            border-color: #6a9955;
+            box-shadow: 0 0 20px rgba(106, 153, 85, 0.1);
         }
 
         h2 {
@@ -96,6 +158,12 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 1px solid #3e3e42;
+            transition: all 0.3s ease;
+        }
+
+        .content-section:hover h2 {
+            color: #72b5e6;
+            border-bottom-color: #6a9955;
         }
 
         h2::before {
@@ -108,15 +176,27 @@
             padding: 15px;
             border-left: 2px solid #3e3e42;
             padding-left: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover, .work-item:hover, .project-item:hover {
+            border-left-color: #6a9955;
+            background: rgba(106, 153, 85, 0.05);
+            transform: translateX(5px);
         }
 
         .education-item h3, .work-item h3, .project-item h3 {
             color: #dcdcaa;
             margin-bottom: 10px;
             font-size: 1.2em;
+            transition: color 0.3s ease;
         }
 
-        . education-item h3::before, .work-item h3::before, .project-item h3::before {
+        . education-item:hover h3, .work-item:hover h3, .project-item:hover h3 {
+            color: #f0e6c0;
+        }
+
+        .education-item h3::before, . work-item h3::before, .project-item h3::before {
             content: "> ";
             color: #6a9955;
         }
@@ -124,6 +204,11 @@
         .education-item p, . work-item p, .project-item p {
             color: #858585;
             margin: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        . education-item:hover p, . work-item:hover p, . project-item:hover p {
+            color: #a0a0a0;
         }
 
         .skills-grid {
@@ -137,11 +222,24 @@
             background: #1e1e1e;
             padding: 20px;
             border: 1px solid #3e3e42;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            border-color: #6a9955;
+            background: #252526;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .skill-category h3 {
             color: #c586c0;
             margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .skill-category:hover h3 {
+            color: #d8a0d0;
         }
 
         .skill-category h3::before {
@@ -157,11 +255,26 @@
         .skill-category li {
             padding: 5px 0;
             color: #858585;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover li {
+            color: #a0a0a0;
+        }
+
+        .skill-category li:hover {
+            color: #c0c0c0;
+            transform: translateX(5px);
         }
 
         .skill-category li:before {
             content: "- ";
             color: #6a9955;
+            transition: color 0.3s ease;
+        }
+
+        .skill-category li:hover:before {
+            color: #8bc574;
         }
 
         .projects-grid {
@@ -175,28 +288,60 @@
             background: #1e1e1e;
             padding: 20px;
             border: 1px solid #3e3e42;
-            transition: border-color 0.3s;
+            transition: all 0. 3s ease;
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #3e3e42;
+            transition: all 0.3s ease;
         }
 
         .project-card:hover {
             border-color: #6a9955;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            background: #252526;
         }
 
-        .project-card img {
+        .project-card:hover::before {
+            background: linear-gradient(90deg, #6a9955, #4ec9b0);
+            height: 3px;
+        }
+
+        . project-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border: 1px solid #3e3e42;
             margin-bottom: 15px;
             filter: grayscale(50%) brightness(0.9);
+            transition: all 0.3s ease;
+        }
+
+        . project-card:hover img {
+            filter: grayscale(0%) brightness(1);
+            border-color: #6a9955;
+            transform: scale(1.02);
         }
 
         .project-card h3 {
             color: #4ec9b0;
             margin-bottom: 15px;
+            transition: all 0.3s ease;
         }
 
-        . project-card h3::before {
+        .project-card:hover h3 {
+            color: #6ee7d2;
+        }
+
+        .project-card h3::before {
             content: ">> ";
             color: #6a9955;
         }
@@ -204,6 +349,11 @@
         .project-card p {
             color: #858585;
             margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .project-card:hover p {
+            color: #a0a0a0;
         }
 
         .project-link {
@@ -213,20 +363,32 @@
             margin-right: 15px;
             margin-top: 5px;
             border-bottom: 1px solid transparent;
+            transition: all 0. 3s ease;
+            padding: 2px 4px;
         }
 
-        .project-link:hover {
+        . project-link:hover {
             border-bottom: 1px solid #ce9178;
+            color: #e8ab92;
+            background: rgba(206, 145, 120, 0.1);
+            transform: translateY(-2px);
         }
 
-        .project-link::before {
+        . project-link::before {
             content: "[";
             color: #858585;
+            transition: color 0.3s ease;
         }
 
         . project-link::after {
             content: "]";
             color: #858585;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover::before,
+        .project-link:hover::after {
+            color: #ce9178;
         }
 
         footer {
@@ -235,9 +397,15 @@
             color: #6a6a6a;
             border-top: 1px solid #3e3e42;
             margin-top: 30px;
+            transition: all 0.3s ease;
         }
 
-        .contact-box {
+        footer:hover {
+            color: #858585;
+            border-top-color: #6a9955;
+        }
+
+        . contact-box {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -246,11 +414,23 @@
             border: 1px solid #3e3e42;
             padding: 20px;
             z-index: 1000;
+            transition: all 0.3s ease;
         }
 
-        .contact-box h4 {
+        .contact-box:hover {
+            border-color: #6a9955;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            transform: translateY(-3px);
+        }
+
+        . contact-box h4 {
             margin-bottom: 15px;
             color: #569cd6;
+            transition: color 0.3s ease;
+        }
+
+        . contact-box:hover h4 {
+            color: #72b5e6;
         }
 
         .contact-box h4::before {
@@ -263,9 +443,14 @@
             margin-top: 10px;
             color: #c0c0c0;
             font-size: 0.9em;
+            transition: color 0.3s ease;
         }
 
-        . contact-box form input[type="text"],
+        . contact-box form label:hover {
+            color: #d4d4d4;
+        }
+
+        .contact-box form input[type="text"],
         .contact-box form input[type="email"],
         .contact-box form textarea {
             width: 100%;
@@ -276,12 +461,20 @@
             color: #c0c0c0;
             font-family: 'Consolas', monospace;
             font-size: 0.9em;
+            transition: all 0.3s ease;
         }
 
         .contact-box form input:focus,
         .contact-box form textarea:focus {
             outline: none;
             border-color: #6a9955;
+            background: #252526;
+            box-shadow: 0 0 10px rgba(106, 153, 85, 0.2);
+        }
+
+        .contact-box form input:hover,
+        .contact-box form textarea:hover {
+            border-color: #5a7a55;
         }
 
         .contact-box form button {
@@ -292,12 +485,32 @@
             font-family: 'Consolas', monospace;
             cursor: pointer;
             width: 100%;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-box form button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(106, 153, 85, 0.2);
+            transition: left 0.3s ease;
+        }
+
+        .contact-box form button:hover::before {
+            left: 0;
         }
 
         .contact-box form button:hover {
-            background: #3e3e42;
+            background: #252526;
             border-color: #6a9955;
+            color: #d4d4d4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         @media (max-width: 768px) {
@@ -319,7 +532,7 @@
                 <p>Phone: +33 07 43 32 65 25</p>
                 <p>Location: Alcaudete, Spain | Age: 24</p>
             </div>
-            <a href="cv. pdf" class="download-btn" download>Download CV (PDF)</a>
+            <a href="cv.pdf" class="download-btn" download>Download CV (PDF)</a>
         </header>
 
         <div class="content-section">
@@ -327,8 +540,8 @@
             
             <div class="education-item">
                 <h3>University of Seville</h3>
-                <p><strong>B.Sc. in Physics</strong> Only final thesis remain</p>
-                <p><strong>B. Sc. in Materials Engineering</strong> Only final thesis remain</p>
+                <p><strong>B. Sc. in Physics</strong> Only final thesis remain</p>
+                <p><strong>B.Sc. in Materials Engineering</strong> Only final thesis remain</p>
             </div>
 
             <div class="education-item">
@@ -374,7 +587,7 @@
                     <p>Developed a web-based tool to automatazing purchasing processes. </p>
                     <a href="https://drive.google.com/file/d/1YXkgr56GGC6aw1sM-Fb2NEjvPNxJC0V8/view?usp=drive_link" class="project-link" target="_blank">video</a>
                     <a href="https://jeshopenhauer.github.io/gestorpedidos/" class="project-link" target="_blank">page</a>
-                    <a href="https://drive.google. com/file/d/1ITm_k02nLf7XelPo-NTiU0UD7XmKH2bU/view? usp=sharing" class="project-link" target="_blank">pdf</a>
+                    <a href="https://drive.google.com/file/d/1ITm_k02nLf7XelPo-NTiU0UD7XmKH2bU/view?usp=sharing" class="project-link" target="_blank">pdf</a>
                 </div>
 
                 <div class="project-card">
@@ -386,8 +599,8 @@
                 <div class="project-card">
                     <h3>VLS AI Working Group of Ever Olivas: Metaprompts for LEA</h3>
                     <p>Contributed to AI automation initiatives by developing metaprompts and frameworks.</p>
-                    <a href="https://drive.google.com/file/d/12ed9nTrP3gUoNMfn2kSgexmWSqgmsU5U/view?usp=drive_link" class="project-link" target="_blank">page</a>
-                    <a href="https://drive.google.com/file/d/1vq88cMLhfT8OmDa8-0zI298sVb57ovTB/view?usp=drive_link" class="project-link" target="_blank">video</a>
+                    <a href="https://drive.google. com/file/d/12ed9nTrP3gUoNMfn2kSgexmWSqgmsU5U/view?usp=drive_link" class="project-link" target="_blank">page</a>
+                    <a href="https://drive. google.com/file/d/1vq88cMLhfT8OmDa8-0zI298sVb57ovTB/view?usp=drive_link" class="project-link" target="_blank">video</a>
                 </div>
             </div>
         </div>
@@ -399,7 +612,7 @@
                 <div class="project-card">
                     <h3>Japanese learning page</h3>
                     <p>Web page to help in learning japanese. </p>
-                    <a href="https://kanjilist-git-main-alemxrals-projects.vercel.app/index.html" class="project-link" target="_blank">view page</a>
+                    <a href="https://kanjilist-git-main-alemxrals-projects. vercel.app/index.html" class="project-link" target="_blank">view page</a>
                 </div>
 
                 <div class="project-card">
@@ -412,8 +625,8 @@
                     <h3>Trading on Polymarket</h3>
                     <p>Active trader on Polymarket ranking in the top 4% by profitability (1. 3M users)</p>
                     <a href="https://polymarket.com/@almo" class="project-link" target="_blank">view page</a>
-                    <a href="https://www. hashdive.com/Analyze_User? user_address=0xf937dbe9976ac34157b30dd55bdbf248458f6b43&market=Will+Kanye+launch+a+coin+in+February%3F+-+No+%F0%9F%94%B4" class="project-link" target="_blank">analysis</a>
-                    <p>+ Built a production-grade client for Polymarket/Polygon: REST + WebSocket utilities, order-book adapters.  Also collaborating in a fast execution (for automated trading), integrating with a custom system.</p>
+                    <a href="https://www.hashdive.com/Analyze_User? user_address=0xf937dbe9976ac34157b30dd55bdbf248458f6b43&market=Will+Kanye+launch+a+coin+in+February%3F+-+No+%F0%9F%94%B4" class="project-link" target="_blank">analysis</a>
+                    <p>+ Built a production-grade client for Polymarket/Polygon: REST + WebSocket utilities, order-book adapters.  Also collaborating in a fast execution (for automated trading), integrating with a custom system. </p>
                 </div>
             </div>
         </div>
@@ -486,7 +699,7 @@
         </script>
 
         <footer>
-            <p>© 2025 Jesús Moral Aranda. All rights reserved.</p>
+            <p>© 2025 Jesús Moral Aranda.  All rights reserved.</p>
         </footer>
     </div>
 </body>
