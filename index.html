@@ -14,8 +14,8 @@
         body {
             font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
             line-height: 1.6;
-            color: #00ff00;
-            background: #1a1a1a;
+            color: #c0c0c0;
+            background: #1e1e1e;
             min-height: 100vh;
             padding: 20px;
         }
@@ -26,30 +26,31 @@
         }
 
         header {
-            background: #0d0d0d;
-            border: 1px solid #333;
+            background: #252526;
+            border: 1px solid #3e3e42;
             padding: 30px;
             margin-bottom: 20px;
         }
 
         h1 {
-            color: #00ff00;
+            color: #d4d4d4;
             font-size: 2em;
             margin-bottom: 10px;
         }
 
         h1::before {
             content: "$ ";
+            color: #6a9955;
         }
 
-        . subtitle {
-            color: #999;
+        .subtitle {
+            color: #858585;
             font-size: 1em;
             margin-bottom: 15px;
         }
 
         . contact-info {
-            color: #00ff00;
+            color: #c0c0c0;
             line-height: 1.8;
         }
 
@@ -58,7 +59,7 @@
         }
 
         .contact-info a {
-            color: #00ffff;
+            color: #4ec9b0;
             text-decoration: none;
         }
 
@@ -68,60 +69,60 @@
 
         .download-btn {
             display: inline-block;
-            background: #0d0d0d;
-            color: #00ff00;
+            background: #252526;
+            color: #d4d4d4;
             padding: 10px 20px;
-            border: 1px solid #00ff00;
+            border: 1px solid #3e3e42;
             text-decoration: none;
             margin-top: 15px;
             transition: all 0.3s;
         }
 
         .download-btn:hover {
-            background: #00ff00;
-            color: #000;
+            background: #3e3e42;
+            border-color: #6a9955;
         }
 
         .content-section {
-            background: #0d0d0d;
-            border: 1px solid #333;
+            background: #252526;
+            border: 1px solid #3e3e42;
             padding: 30px;
             margin-bottom: 20px;
         }
 
         h2 {
-            color: #00ffff;
+            color: #569cd6;
             font-size: 1.5em;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #3e3e42;
         }
 
         h2::before {
             content: "// ";
-            color: #666;
+            color: #6a9955;
         }
 
         .education-item, .work-item, .project-item {
             margin-bottom: 20px;
             padding: 15px;
-            border-left: 2px solid #333;
+            border-left: 2px solid #3e3e42;
             padding-left: 20px;
         }
 
         .education-item h3, .work-item h3, .project-item h3 {
-            color: #ffff00;
+            color: #dcdcaa;
             margin-bottom: 10px;
             font-size: 1.2em;
         }
 
-        .education-item h3::before, .work-item h3::before, .project-item h3::before {
+        . education-item h3::before, .work-item h3::before, .project-item h3::before {
             content: "> ";
-            color: #00ff00;
+            color: #6a9955;
         }
 
-        .education-item p, .work-item p, .project-item p {
-            color: #999;
+        .education-item p, . work-item p, .project-item p {
+            color: #858585;
             margin: 5px 0;
         }
 
@@ -133,18 +134,19 @@
         }
 
         .skill-category {
-            background: #000;
+            background: #1e1e1e;
             padding: 20px;
-            border: 1px solid #333;
+            border: 1px solid #3e3e42;
         }
 
         .skill-category h3 {
-            color: #ff00ff;
+            color: #c586c0;
             margin-bottom: 10px;
         }
 
         .skill-category h3::before {
             content: "* ";
+            color: #6a9955;
         }
 
         .skill-category ul {
@@ -154,12 +156,12 @@
 
         .skill-category li {
             padding: 5px 0;
-            color: #999;
+            color: #858585;
         }
 
         .skill-category li:before {
             content: "- ";
-            color: #00ff00;
+            color: #6a9955;
         }
 
         .projects-grid {
@@ -170,42 +172,42 @@
         }
 
         .project-card {
-            background: #000;
+            background: #1e1e1e;
             padding: 20px;
-            border: 1px solid #333;
+            border: 1px solid #3e3e42;
             transition: border-color 0.3s;
         }
 
         .project-card:hover {
-            border-color: #00ff00;
+            border-color: #6a9955;
         }
 
         .project-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border: 1px solid #333;
+            border: 1px solid #3e3e42;
             margin-bottom: 15px;
-            filter: grayscale(100%);
+            filter: grayscale(50%) brightness(0.9);
         }
 
         .project-card h3 {
-            color: #00ffff;
+            color: #4ec9b0;
             margin-bottom: 15px;
         }
 
         . project-card h3::before {
             content: ">> ";
-            color: #00ff00;
+            color: #6a9955;
         }
 
         .project-card p {
-            color: #999;
+            color: #858585;
             margin-bottom: 15px;
         }
 
         .project-link {
-            color: #ffff00;
+            color: #ce9178;
             text-decoration: none;
             display: inline-block;
             margin-right: 15px;
@@ -214,61 +216,64 @@
         }
 
         .project-link:hover {
-            border-bottom: 1px solid #ffff00;
+            border-bottom: 1px solid #ce9178;
         }
 
         .project-link::before {
             content: "[";
+            color: #858585;
         }
 
-        .project-link::after {
+        . project-link::after {
             content: "]";
+            color: #858585;
         }
 
         footer {
             text-align: center;
             padding: 30px;
-            color: #666;
-            border-top: 1px solid #333;
+            color: #6a6a6a;
+            border-top: 1px solid #3e3e42;
             margin-top: 30px;
         }
 
-        . contact-box {
+        .contact-box {
             position: fixed;
             bottom: 20px;
             right: 20px;
             width: 300px;
-            background: #0d0d0d;
-            border: 1px solid #333;
+            background: #252526;
+            border: 1px solid #3e3e42;
             padding: 20px;
             z-index: 1000;
         }
 
         .contact-box h4 {
             margin-bottom: 15px;
-            color: #00ffff;
+            color: #569cd6;
         }
 
-        . contact-box h4::before {
+        .contact-box h4::before {
             content: "# ";
+            color: #6a9955;
         }
 
         .contact-box form label {
             display: block;
             margin-top: 10px;
-            color: #00ff00;
+            color: #c0c0c0;
             font-size: 0.9em;
         }
 
-        .contact-box form input[type="text"],
+        . contact-box form input[type="text"],
         .contact-box form input[type="email"],
         .contact-box form textarea {
             width: 100%;
             padding: 8px;
             margin: 5px 0 10px;
-            border: 1px solid #333;
-            background: #000;
-            color: #00ff00;
+            border: 1px solid #3e3e42;
+            background: #1e1e1e;
+            color: #c0c0c0;
             font-family: 'Consolas', monospace;
             font-size: 0.9em;
         }
@@ -276,13 +281,13 @@
         .contact-box form input:focus,
         .contact-box form textarea:focus {
             outline: none;
-            border-color: #00ff00;
+            border-color: #6a9955;
         }
 
         .contact-box form button {
-            background: #000;
-            color: #00ff00;
-            border: 1px solid #00ff00;
+            background: #1e1e1e;
+            color: #c0c0c0;
+            border: 1px solid #3e3e42;
             padding: 10px 20px;
             font-family: 'Consolas', monospace;
             cursor: pointer;
@@ -291,8 +296,8 @@
         }
 
         .contact-box form button:hover {
-            background: #00ff00;
-            color: #000;
+            background: #3e3e42;
+            border-color: #6a9955;
         }
 
         @media (max-width: 768px) {
@@ -314,7 +319,7 @@
                 <p>Phone: +33 07 43 32 65 25</p>
                 <p>Location: Alcaudete, Spain | Age: 24</p>
             </div>
-            <a href="cv.pdf" class="download-btn" download>Download CV (PDF)</a>
+            <a href="cv. pdf" class="download-btn" download>Download CV (PDF)</a>
         </header>
 
         <div class="content-section">
@@ -322,8 +327,8 @@
             
             <div class="education-item">
                 <h3>University of Seville</h3>
-                <p><strong>B. Sc. in Physics</strong> Only final thesis remain</p>
-                <p><strong>B.Sc. in Materials Engineering</strong> Only final thesis remain</p>
+                <p><strong>B.Sc. in Physics</strong> Only final thesis remain</p>
+                <p><strong>B. Sc. in Materials Engineering</strong> Only final thesis remain</p>
             </div>
 
             <div class="education-item">
@@ -344,7 +349,7 @@
             <div class="work-item">
                 <h3>Project Buyer Trainee - Valeo Martos</h3>
                 <p><strong>Duration:</strong> 5 months</p>
-                <p>Between others: developing software solutions for purchasing management and contract analysis.  Contributed to AI working groups where I focused on process automation.</p>
+                <p>Between others: developing software solutions for purchasing management and contract analysis.  Contributed to AI working groups where I focused on process automation. </p>
             </div>
 
             <div class="work-item">
@@ -356,7 +361,7 @@
             <div class="work-item">
                 <h3>Referee - Spanish Football Federation</h3>
                 <p><strong>Duration:</strong> 3 years</p>
-                <p>Officiated football matches, decision-making skills and problems resolution under pressure. </p>
+                <p>Officiated football matches, decision-making skills and problems resolution under pressure.</p>
             </div>
         </div>
 
@@ -369,7 +374,7 @@
                     <p>Developed a web-based tool to automatazing purchasing processes. </p>
                     <a href="https://drive.google.com/file/d/1YXkgr56GGC6aw1sM-Fb2NEjvPNxJC0V8/view?usp=drive_link" class="project-link" target="_blank">video</a>
                     <a href="https://jeshopenhauer.github.io/gestorpedidos/" class="project-link" target="_blank">page</a>
-                    <a href="https://drive.google. com/file/d/1ITm_k02nLf7XelPo-NTiU0UD7XmKH2bU/view?usp=sharing" class="project-link" target="_blank">pdf</a>
+                    <a href="https://drive.google. com/file/d/1ITm_k02nLf7XelPo-NTiU0UD7XmKH2bU/view? usp=sharing" class="project-link" target="_blank">pdf</a>
                 </div>
 
                 <div class="project-card">
@@ -380,7 +385,7 @@
 
                 <div class="project-card">
                     <h3>VLS AI Working Group of Ever Olivas: Metaprompts for LEA</h3>
-                    <p>Contributed to AI automation initiatives by developing metaprompts and frameworks. </p>
+                    <p>Contributed to AI automation initiatives by developing metaprompts and frameworks.</p>
                     <a href="https://drive.google.com/file/d/12ed9nTrP3gUoNMfn2kSgexmWSqgmsU5U/view?usp=drive_link" class="project-link" target="_blank">page</a>
                     <a href="https://drive.google.com/file/d/1vq88cMLhfT8OmDa8-0zI298sVb57ovTB/view?usp=drive_link" class="project-link" target="_blank">video</a>
                 </div>
@@ -399,7 +404,7 @@
 
                 <div class="project-card">
                     <h3>Selling socks ecommerce</h3>
-                    <a href="https://miemiesocks.vercel.app/" class="project-link" target="_blank">view page</a>
+                    <a href="https://miemiesocks. vercel.app/" class="project-link" target="_blank">view page</a>
                 </div>
 
                 <div class="project-card">
