@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesús Moral Aranda - Portfolio & CV</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime:wght@400;700&display=swap');
-
         * {
             margin: 0;
             padding: 0;
@@ -14,34 +12,12 @@
         }
 
         body {
-            font-family: 'Courier Prime', 'Courier New', monospace;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
             line-height: 1.6;
             color: #00ff00;
-            background: #0a0a0a;
+            background: #1a1a1a;
             min-height: 100vh;
             padding: 20px;
-        }
-
-        .scanline {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                to bottom,
-                rgba(255, 255, 255, 0) 50%,
-                rgba(0, 255, 0, 0.02) 51%
-            );
-            background-size: 100% 4px;
-            pointer-events: none;
-            z-index: 9999;
-            animation: scanline 10s linear infinite;
-        }
-
-        @keyframes scanline {
-            0% { background-position: 0 0; }
-            100% { background-position: 0 100%; }
         }
 
         .container {
@@ -49,203 +25,107 @@
             margin: 0 auto;
         }
 
-        . terminal-border {
-            border: 3px solid #00ff00;
-            padding: 3px;
-            background: #0a0a0a;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0, 255, 0, 0.1);
-        }
-
         header {
-            background: #000;
-            border: 2px solid #00ff00;
+            background: #0d0d0d;
+            border: 1px solid #333;
             padding: 30px;
             margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
-            position: relative;
-        }
-
-        header::before {
-            content: "┌─────────────────────────────────────────────────────────────────┐";
-            display: block;
-            color: #00ff00;
-            font-family: 'VT323', monospace;
-            margin-bottom: 10px;
-            font-size: 0.9em;
-        }
-
-        header::after {
-            content: "└─────────────────────────────────────────────────────────────────┘";
-            display: block;
-            color: #00ff00;
-            font-family: 'VT323', monospace;
-            margin-top: 10px;
-            font-size: 0. 9em;
-        }
-
-        .prompt {
-            color: #00ff00;
-            text-shadow: 0 0 5px #00ff00;
-        }
-
-        .prompt::before {
-            content: "$ ";
-            color: #0f0;
         }
 
         h1 {
             color: #00ff00;
-            font-size: 2.5em;
+            font-size: 2em;
             margin-bottom: 10px;
-            font-family: 'VT323', monospace;
-            text-shadow: 0 0 10px #00ff00;
-            letter-spacing: 2px;
         }
 
         h1::before {
-            content: "> ";
-            color: #00ff00;
+            content: "$ ";
         }
 
-        . ascii-art {
-            color: #00ff00;
-            font-family: 'VT323', monospace;
-            font-size: 0.8em;
-            white-space: pre;
-            line-height: 1.2;
-            margin: 15px 0;
+        . subtitle {
+            color: #999;
+            font-size: 1em;
+            margin-bottom: 15px;
         }
 
-        .contact-info {
-            margin-top: 15px;
+        . contact-info {
+            color: #00ff00;
             line-height: 1.8;
-            color: #00ff00;
         }
 
-        . contact-info p {
+        .contact-info p {
             margin: 5px 0;
-        }
-
-        .contact-info p::before {
-            content: ">> ";
-            color: #0f0;
-            font-weight: bold;
         }
 
         .contact-info a {
             color: #00ffff;
             text-decoration: none;
-            text-shadow: 0 0 5px #00ffff;
         }
 
-        . contact-info a:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
         .download-btn {
             display: inline-block;
-            background: #000;
+            background: #0d0d0d;
             color: #00ff00;
-            padding: 12px 25px;
-            border: 2px solid #00ff00;
+            padding: 10px 20px;
+            border: 1px solid #00ff00;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-            font-family: 'VT323', monospace;
-            font-size: 1.2em;
-        }
-
-        . download-btn::before {
-            content: "[";
-            margin-right: 5px;
-        }
-
-        .download-btn::after {
-            content: "]";
-            margin-left: 5px;
+            margin-top: 15px;
+            transition: all 0.3s;
         }
 
         .download-btn:hover {
             background: #00ff00;
             color: #000;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
         }
 
         .content-section {
-            background: #000;
-            border: 2px solid #00ff00;
+            background: #0d0d0d;
+            border: 1px solid #333;
             padding: 30px;
             margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
-            position: relative;
-        }
-
-        .content-section::before {
-            content: "┌" attr(data-title) "┐";
-            position: absolute;
-            top: -12px;
-            left: 20px;
-            background: #000;
-            padding: 0 10px;
-            color: #00ff00;
-            font-family: 'VT323', monospace;
         }
 
         h2 {
             color: #00ffff;
-            font-size: 1.8em;
+            font-size: 1.5em;
             margin-bottom: 20px;
-            border-bottom: 2px dashed #00ff00;
             padding-bottom: 10px;
-            font-family: 'VT323', monospace;
-            text-shadow: 0 0 10px #00ffff;
-            letter-spacing: 3px;
+            border-bottom: 1px solid #333;
         }
 
         h2::before {
-            content: "# ";
-            color: #00ff00;
+            content: "// ";
+            color: #666;
         }
 
         .education-item, .work-item, .project-item {
             margin-bottom: 20px;
             padding: 15px;
-            background: #000;
-            border: 1px solid #00ff00;
-            border-left: 4px solid #00ff00;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+            border-left: 2px solid #333;
+            padding-left: 20px;
         }
 
         .education-item h3, .work-item h3, .project-item h3 {
             color: #ffff00;
             margin-bottom: 10px;
-            font-family: 'VT323', monospace;
-            font-size: 1.5em;
-            text-shadow: 0 0 5px #ffff00;
+            font-size: 1.2em;
         }
 
         .education-item h3::before, .work-item h3::before, .project-item h3::before {
-            content: "└─> ";
+            content: "> ";
             color: #00ff00;
         }
 
-        . education-item p, .work-item p, . project-item p {
-            color: #00ff00;
+        .education-item p, .work-item p, .project-item p {
+            color: #999;
             margin: 5px 0;
-            padding-left: 20px;
         }
 
-        .education-item p::before, .work-item p::before {
-            content: "│ ";
-            color: #00ff00;
-            margin-left: -20px;
-            margin-right: 10px;
-        }
-
-        . skills-grid {
+        .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
@@ -255,22 +135,16 @@
         .skill-category {
             background: #000;
             padding: 20px;
-            border: 1px solid #00ff00;
-            border-top: 3px solid #00ff00;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+            border: 1px solid #333;
         }
 
         .skill-category h3 {
             color: #ff00ff;
             margin-bottom: 10px;
-            font-family: 'VT323', monospace;
-            font-size: 1.4em;
-            text-shadow: 0 0 5px #ff00ff;
         }
 
         .skill-category h3::before {
-            content: "[+] ";
-            color: #00ff00;
+            content: "* ";
         }
 
         .skill-category ul {
@@ -280,15 +154,12 @@
 
         .skill-category li {
             padding: 5px 0;
-            color: #00ff00;
-            font-family: 'Courier Prime', monospace;
+            color: #999;
         }
 
         .skill-category li:before {
-            content: "▸ ";
+            content: "- ";
             color: #00ff00;
-            font-weight: bold;
-            margin-right: 5px;
         }
 
         .projects-grid {
@@ -301,260 +172,153 @@
         .project-card {
             background: #000;
             padding: 20px;
-            border: 2px solid #00ff00;
-            transition: all 0.3s ease;
-            position: relative;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-        }
-
-        .project-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: #00ff00;
-            box-shadow: 0 0 10px #00ff00;
+            border: 1px solid #333;
+            transition: border-color 0.3s;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
-            border-color: #00ffff;
-        }
-
-        . project-card:hover::before {
-            background: #00ffff;
-            box-shadow: 0 0 15px #00ffff;
+            border-color: #00ff00;
         }
 
         .project-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border: 1px solid #00ff00;
+            border: 1px solid #333;
             margin-bottom: 15px;
-            filter: grayscale(100%) contrast(150%) brightness(80%);
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+            filter: grayscale(100%);
         }
 
-        .project-card:hover img {
-            filter: grayscale(100%) contrast(150%) brightness(100%);
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0. 5);
-        }
-
-        . project-card h3 {
+        .project-card h3 {
             color: #00ffff;
             margin-bottom: 15px;
-            font-family: 'VT323', monospace;
-            font-size: 1.5em;
-            text-shadow: 0 0 5px #00ffff;
         }
 
-        .project-card h3::before {
-            content: ":: ";
+        . project-card h3::before {
+            content: ">> ";
             color: #00ff00;
         }
 
-        . project-card p {
-            color: #00ff00;
+        .project-card p {
+            color: #999;
             margin-bottom: 15px;
-            padding-left: 0;
-        }
-
-        .project-card p::before {
-            content: none;
         }
 
         .project-link {
             color: #ffff00;
             text-decoration: none;
-            font-weight: bold;
             display: inline-block;
-            margin-top: 10px;
-            margin-right: 10px;
-            border: 1px solid #ffff00;
-            padding: 5px 10px;
-            transition: all 0.3s ease;
-            text-shadow: 0 0 5px #ffff00;
-            font-family: 'VT323', monospace;
-            font-size: 1.1em;
+            margin-right: 15px;
+            margin-top: 5px;
+            border-bottom: 1px solid transparent;
         }
 
         .project-link:hover {
-            background: #ffff00;
-            color: #000;
-            box-shadow: 0 0 15px rgba(255, 255, 0, 0.6);
+            border-bottom: 1px solid #ffff00;
+        }
+
+        .project-link::before {
+            content: "[";
+        }
+
+        .project-link::after {
+            content: "]";
         }
 
         footer {
             text-align: center;
             padding: 30px;
-            color: #00ff00;
+            color: #666;
+            border-top: 1px solid #333;
             margin-top: 30px;
-            border-top: 2px dashed #00ff00;
-            font-family: 'VT323', monospace;
-            font-size: 1.2em;
-        }
-
-        footer::before {
-            content: ">> ";
-            color: #00ff00;
         }
 
         . contact-box {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 320px;
-            background: #000;
-            border: 3px solid #00ff00;
-            box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+            width: 300px;
+            background: #0d0d0d;
+            border: 1px solid #333;
             padding: 20px;
             z-index: 1000;
-            font-family: 'Courier Prime', monospace;
         }
 
         .contact-box h4 {
             margin-bottom: 15px;
             color: #00ffff;
-            font-size: 1.3em;
-            font-family: 'VT323', monospace;
-            text-shadow: 0 0 10px #00ffff;
-            letter-spacing: 2px;
         }
 
-        .contact-box h4::before {
-            content: ">>> ";
-            color: #00ff00;
+        . contact-box h4::before {
+            content: "# ";
         }
 
         .contact-box form label {
             display: block;
             margin-top: 10px;
-            font-weight: bold;
             color: #00ff00;
             font-size: 0.9em;
         }
 
-        .contact-box form label::before {
-            content: "> ";
-            color: #00ff00;
-        }
-
-        . contact-box form input[type="text"],
+        .contact-box form input[type="text"],
         .contact-box form input[type="email"],
         .contact-box form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 8px;
             margin: 5px 0 10px;
-            border: 2px solid #00ff00;
-            background: #0a0a0a;
+            border: 1px solid #333;
+            background: #000;
             color: #00ff00;
+            font-family: 'Consolas', monospace;
             font-size: 0.9em;
-            font-family: 'Courier Prime', monospace;
-            box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.2);
         }
 
-        .contact-box form input[type="text"]:focus,
-        .contact-box form input[type="email"]:focus,
+        .contact-box form input:focus,
         .contact-box form textarea:focus {
             outline: none;
-            border-color: #00ffff;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            border-color: #00ff00;
         }
 
         .contact-box form button {
             background: #000;
             color: #00ff00;
-            border: 2px solid #00ff00;
+            border: 1px solid #00ff00;
             padding: 10px 20px;
-            font-size: 1em;
+            font-family: 'Consolas', monospace;
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'VT323', monospace;
-            font-size: 1.2em;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
             width: 100%;
-        }
-
-        .contact-box form button::before {
-            content: "[ ";
-        }
-
-        .contact-box form button::after {
-            content: " ]";
+            transition: all 0.3s;
         }
 
         .contact-box form button:hover {
             background: #00ff00;
             color: #000;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
-        }
-
-        .blinking-cursor {
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 49% { opacity: 1; }
-            50%, 100% { opacity: 0; }
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
-            }
-
             .contact-box {
                 width: calc(100% - 40px);
                 left: 20px;
                 right: 20px;
             }
-
-            .content-section {
-                padding: 20px;
-            }
-        }
-
-        /* Glitch effect for hover */
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
-        }
-
-        .project-card:hover h3 {
-            animation: glitch 0.3s infinite;
         }
     </style>
 </head>
 <body>
-    <div class="scanline"></div>
     <div class="container">
         <header>
-            <div class="header-content">
-                <h1>JESÚS MORAL ARANDA<span class="blinking-cursor">_</span></h1>
-                <div class="ascii-art">
- ╔═══════════════════════════════════════════════════╗
- ║  Physics & Materials Engineering | Dev Projects   ║
- ╚═══════════════════════════════════════════════════╝
-                </div>
-                <div class="contact-info">
-                    <p>EMAIL: <a href="mailto:jesusmoralaranda10@gmail.com">jesusmoralaranda10@gmail.com</a></p>
-                    <p>PHONE: +33 07 43 32 65 25</p>
-                    <p>LOCATION: Alcaudete, Spain | AGE: 24</p>
-                </div>
-                <a href="cv.pdf" class="download-btn" download>DOWNLOAD CV (PDF)</a>
+            <h1>Jesús Moral Aranda</h1>
+            <p class="subtitle">Physics & Materials Engineering | Software Projects</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:jesusmoralaranda10@gmail.com">jesusmoralaranda10@gmail.com</a></p>
+                <p>Phone: +33 07 43 32 65 25</p>
+                <p>Location: Alcaudete, Spain | Age: 24</p>
             </div>
+            <a href="cv.pdf" class="download-btn" download>Download CV (PDF)</a>
         </header>
 
         <div class="content-section">
-            <h2>EDUCATION</h2>
+            <h2>Education</h2>
             
             <div class="education-item">
                 <h3>University of Seville</h3>
@@ -575,12 +339,12 @@
         </div>
 
         <div class="content-section">
-            <h2>WORK EXPERIENCE</h2>
+            <h2>Work Experience</h2>
             
             <div class="work-item">
                 <h3>Project Buyer Trainee - Valeo Martos</h3>
                 <p><strong>Duration:</strong> 5 months</p>
-                <p>Between others: developing software solutions for purchasing management and contract analysis.  Contributed to AI working groups where I focused on process automation. </p>
+                <p>Between others: developing software solutions for purchasing management and contract analysis.  Contributed to AI working groups where I focused on process automation.</p>
             </div>
 
             <div class="work-item">
@@ -592,65 +356,65 @@
             <div class="work-item">
                 <h3>Referee - Spanish Football Federation</h3>
                 <p><strong>Duration:</strong> 3 years</p>
-                <p>Officiated football matches, decision-making skills and problems resolution under pressure.</p>
+                <p>Officiated football matches, decision-making skills and problems resolution under pressure. </p>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>SOFTWARE DEVELOPMENT PROJECTS AT VALEO</h2>
+            <h2>Software Development Projects at Valeo</h2>
             
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Purchasing Manager Autofill Tool</h3>
                     <p>Developed a web-based tool to automatazing purchasing processes. </p>
-                    <a href="https://drive.google.com/file/d/1YXkgr56GGC6aw1sM-Fb2NEjvPNxJC0V8/view?usp=drive_link" class="project-link" target="_blank">VIDEO</a>
-                    <a href="https://jeshopenhauer.github.io/gestorpedidos/" class="project-link" target="_blank">PAGE</a>
-                    <a href="https://drive.google.com/file/d/1ITm_k02nLf7XelPo-NTiU0UD7XmKH2bU/view?usp=sharing" class="project-link" target="_blank">PDF</a>
+                    <a href="https://drive.google.com/file/d/1YXkgr56GGC6aw1sM-Fb2NEjvPNxJC0V8/view?usp=drive_link" class="project-link" target="_blank">video</a>
+                    <a href="https://jeshopenhauer.github.io/gestorpedidos/" class="project-link" target="_blank">page</a>
+                    <a href="https://drive.google. com/file/d/1ITm_k02nLf7XelPo-NTiU0UD7XmKH2bU/view?usp=sharing" class="project-link" target="_blank">pdf</a>
                 </div>
 
                 <div class="project-card">
                     <h3>Analysis of Non-Fraudulent Contracts</h3>
                     <p>Created an analysis tool for contract validation and inspection.</p>
-                    <a href="https://drive.google. com/file/d/17K6Fm2p2RJRtMZANzL0uJHsXqDitqMs6/view?usp=sharing" class="project-link" target="_blank">PAGE</a>
+                    <a href="https://drive.google. com/file/d/17K6Fm2p2RJRtMZANzL0uJHsXqDitqMs6/view?usp=sharing" class="project-link" target="_blank">page</a>
                 </div>
 
                 <div class="project-card">
                     <h3>VLS AI Working Group of Ever Olivas: Metaprompts for LEA</h3>
-                    <p>Contributed to AI automation initiatives by developing metaprompts and frameworks.</p>
-                    <a href="https://drive.google. com/file/d/12ed9nTrP3gUoNMfn2kSgexmWSqgmsU5U/view?usp=drive_link" class="project-link" target="_blank">PAGE</a>
-                    <a href="https://drive.google. com/file/d/1vq88cMLhfT8OmDa8-0zI298sVb57ovTB/view?usp=drive_link" class="project-link" target="_blank">VIDEO</a>
+                    <p>Contributed to AI automation initiatives by developing metaprompts and frameworks. </p>
+                    <a href="https://drive.google.com/file/d/12ed9nTrP3gUoNMfn2kSgexmWSqgmsU5U/view?usp=drive_link" class="project-link" target="_blank">page</a>
+                    <a href="https://drive.google.com/file/d/1vq88cMLhfT8OmDa8-0zI298sVb57ovTB/view?usp=drive_link" class="project-link" target="_blank">video</a>
                 </div>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>PERSONAL PROJECTS</h2>
+            <h2>Personal Projects</h2>
             
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Japanese learning page</h3>
                     <p>Web page to help in learning japanese. </p>
-                    <a href="https://kanjilist-git-main-alemxrals-projects.vercel.app/index.html" class="project-link" target="_blank">VIEW PAGE</a>
+                    <a href="https://kanjilist-git-main-alemxrals-projects.vercel.app/index.html" class="project-link" target="_blank">view page</a>
                 </div>
 
                 <div class="project-card">
                     <h3>Selling socks ecommerce</h3>
-                    <a href="https://miemiesocks.vercel.app/" class="project-link" target="_blank">VIEW PAGE</a>
+                    <a href="https://miemiesocks.vercel.app/" class="project-link" target="_blank">view page</a>
                 </div>
 
                 <div class="project-card">
                     <img src="terminal.png" alt="Imagen de la terminal">
                     <h3>Trading on Polymarket</h3>
                     <p>Active trader on Polymarket ranking in the top 4% by profitability (1. 3M users)</p>
-                    <a href="https://polymarket.com/@almo" class="project-link" target="_blank">VIEW PAGE</a>
-                    <a href="https://www.hashdive.com/Analyze_User? user_address=0xf937dbe9976ac34157b30dd55bdbf248458f6b43&market=Will+Kanye+launch+a+coin+in+February%3F+-+No+%F0%9F%94%B4" class="project-link" target="_blank">ANALYSIS</a>
+                    <a href="https://polymarket.com/@almo" class="project-link" target="_blank">view page</a>
+                    <a href="https://www. hashdive.com/Analyze_User? user_address=0xf937dbe9976ac34157b30dd55bdbf248458f6b43&market=Will+Kanye+launch+a+coin+in+February%3F+-+No+%F0%9F%94%B4" class="project-link" target="_blank">analysis</a>
                     <p>+ Built a production-grade client for Polymarket/Polygon: REST + WebSocket utilities, order-book adapters.  Also collaborating in a fast execution (for automated trading), integrating with a custom system.</p>
                 </div>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>SKILLS</h2>
+            <h2>Skills</h2>
             
             <div class="skills-grid">
                 <div class="skill-category">
@@ -694,18 +458,18 @@
 
         <!-- Contact Box -->
         <div class="contact-box">
-            <h4>CONTACT ME</h4>
+            <h4>Contact Me</h4>
             <form id="contactForm">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
 
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Write your message here" rows="4" required></textarea>
+                <textarea id="message" name="message" placeholder="Your message" rows="4" required></textarea>
 
-                <button type="submit">SEND MESSAGE</button>
+                <button type="submit">Send</button>
             </form>
         </div>
 
@@ -717,7 +481,7 @@
         </script>
 
         <footer>
-            <p>© 2025 Jesús Moral Aranda. All rights reserved. <span class="blinking-cursor">_</span></p>
+            <p>© 2025 Jesús Moral Aranda. All rights reserved.</p>
         </footer>
     </div>
 </body>
