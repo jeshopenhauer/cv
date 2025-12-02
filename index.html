@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<! DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,30 +35,18 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        header:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0. 3);
-        }
-
-        . header-content {
+        .header-content {
             flex: 1;
             min-width: 300px;
         }
 
 . project-card img {
-    width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
-    height: 200px; /* Puedes ajustar esta altura a lo que prefieras */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
-    border-bottom: 1px solid #eee; /* Opcional: una línea para separar la imagen del texto */
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.project-card:hover img {
-    transform: scale(1.05);
-    filter: brightness(1.1);
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
 }
         
 
@@ -66,39 +54,24 @@
             color: #667eea;
             font-size: 2.5em;
             margin-bottom: 10px;
-            transition: color 0.3s ease, transform 0.3s ease;
-            cursor: default;
         }
 
-        h1:hover {
-            color: #764ba2;
-            transform: scale(1.05);
-        }
-
-        .contact-info {
+        . contact-info {
             margin-top: 15px;
             line-height: 1.8;
         }
 
         .contact-info p {
             margin: 5px 0;
-            transition: transform 0.3s ease;
         }
 
-        .contact-info p:hover {
-            transform: translateX(10px);
-        }
-
-        . contact-info a {
+        .contact-info a {
             color: #667eea;
             text-decoration: none;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
         }
 
         .contact-info a:hover {
-            color: #764ba2;
             text-decoration: underline;
-            text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
         }
 
         .download-btn {
@@ -110,18 +83,13 @@
             text-decoration: none;
             font-weight: bold;
             margin-top: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
         .download-btn:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.7);
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-        }
-
-        .download-btn:active {
-            transform: translateY(-1px) scale(1.02);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
         }
 
         .content-section {
@@ -130,12 +98,14 @@
             padding: 40px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0. 3s ease;
+            border: 3px solid transparent;
+            transition: transform 0.3s ease, box-shadow 0. 3s ease, border-color 0.3s ease;
         }
 
-        .content-section:hover {
+        . content-section:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            border-color: #667eea;
         }
 
         h2 {
@@ -144,41 +114,27 @@
             margin-bottom: 20px;
             border-bottom: 3px solid #667eea;
             padding-bottom: 10px;
-            transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-            cursor: default;
         }
 
-        h2:hover {
-            color: #764ba2;
-            border-color: #764ba2;
-            transform: translateX(10px);
-        }
-
-        . education-item, .work-item, .project-item {
+        .education-item, .work-item, .project-item {
             margin-bottom: 25px;
             padding: 20px;
             background: #f8f9fa;
             border-radius: 10px;
             border-left: 4px solid #667eea;
-            transition: transform 0.3s ease, box-shadow 0. 3s ease, border-left-width 0.3s ease, background 0.3s ease;
+            transition: border-left-width 0.3s ease, border-left-color 0.3s ease, background 0.3s ease;
             cursor: pointer;
         }
 
-        .education-item:hover, .work-item:hover, .project-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        .education-item:hover, . work-item:hover, .project-item:hover {
             border-left-width: 8px;
+            border-left-color: #764ba2;
             background: #ffffff;
         }
 
         .education-item h3, .work-item h3, .project-item h3 {
             color: #333;
             margin-bottom: 10px;
-            transition: color 0.3s ease;
-        }
-
-        .education-item:hover h3, .work-item:hover h3, .project-item:hover h3 {
-            color: #667eea;
         }
 
         .education-item p, .work-item p, .project-item p {
@@ -193,31 +149,24 @@
             margin-top: 20px;
         }
 
-        .skill-category {
+        . skill-category {
             background: #f8f9fa;
             padding: 20px;
             border-radius: 10px;
             border-left: 4px solid #764ba2;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-width 0.3s ease, background 0.3s ease;
+            transition: border-left-width 0.3s ease, border-left-color 0.3s ease, background 0.3s ease;
             cursor: pointer;
         }
 
         .skill-category:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             border-left-width: 8px;
+            border-left-color: #667eea;
             background: #ffffff;
         }
 
         .skill-category h3 {
             color: #764ba2;
             margin-bottom: 10px;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .skill-category:hover h3 {
-            transform: translateX(5px);
-            color: #667eea;
         }
 
         .skill-category ul {
@@ -228,24 +177,12 @@
         .skill-category li {
             padding: 5px 0;
             color: #666;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .skill-category li:hover {
-            transform: translateX(10px);
-            color: #333;
         }
 
         .skill-category li:before {
             content: "▹ ";
             color: #764ba2;
             font-weight: bold;
-            transition: transform 0.3s ease;
-            display: inline-block;
-        }
-
-        .skill-category li:hover:before {
-            transform: translateX(5px);
         }
 
         .projects-grid {
@@ -260,67 +197,34 @@
             padding: 25px;
             border-radius: 10px;
             border-top: 4px solid #667eea;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-top-width 0. 3s ease, background 0. 3s ease;
-            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        . project-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border-top-width: 8px;
-            background: #ffffff;
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .project-card h3 {
             color: #667eea;
             margin-bottom: 15px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .project-card:hover h3 {
-            color: #764ba2;
-            transform: scale(1.05);
         }
 
         .project-card p {
             color: #666;
             margin-bottom: 15px;
-            transition: color 0.3s ease;
         }
 
-        . project-card:hover p {
-            color: #333;
-        }
-
-        . project-link {
+        .project-link {
             color: #764ba2;
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
             margin-top: 10px;
-            transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-            position: relative;
         }
 
         .project-link:hover {
-            color: #667eea;
-            transform: translateX(5px);
-            text-shadow: 0 0 10px rgba(118, 75, 162, 0.5);
-        }
-
-        .project-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #667eea;
-            transition: width 0.3s ease;
-        }
-
-        .project-link:hover::after {
-            width: 100%;
+            text-decoration: underline;
         }
 
         footer {
@@ -328,11 +232,6 @@
             padding: 30px;
             color: white;
             margin-top: 30px;
-            transition: transform 0.3s ease;
-        }
-
-        footer:hover {
-            transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
@@ -351,7 +250,7 @@
         }
 
            
-        .contact-box {
+        . contact-box {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -359,43 +258,24 @@
             background: white;
             border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0. 2);
             padding: 20px;
             z-index: 1000;
             font-family: 'Segoe UI', Tahoma, sans-serif;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .contact-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
         .contact-box h4 {
             margin-bottom: 15px;
             color: #764ba2;
             font-size: 1.2em;
-            transition: color 0.3s ease, transform 0.3s ease;
         }
 
-        .contact-box:hover h4 {
-            color: #667eea;
-            transform: scale(1.05);
-        }
-
-        .contact-box form label {
+        . contact-box form label {
             display: block;
             margin-top: 10px;
             font-weight: bold;
             color: #333;
             font-size: 0.9em;
-            transition: color 0.3s ease, transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        .contact-box form label:hover {
-            color: #667eea;
-            transform: translateX(3px);
         }
 
         . contact-box form input[type="text"],
@@ -407,25 +287,9 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 0.9em;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
         }
 
-        .contact-box form input[type="text"]:hover,
-        .contact-box form input[type="email"]:hover,
-        .contact-box form textarea:hover {
-            border-color: #667eea;
-        }
-
-        .contact-box form input[type="text"]:focus,
-        .contact-box form input[type="email"]:focus,
-        .contact-box form textarea:focus {
-            border-color: #764ba2;
-            box-shadow: 0 0 10px rgba(118, 75, 162, 0.3);
-            transform: scale(1.02);
-            outline: none;
-        }
-
-        .contact-box form button {
+        . contact-box form button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
@@ -433,18 +297,11 @@
             border-radius: 5px;
             font-size: 1em;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            width: 100%;
+            transition: background 0.3s ease;
         }
 
         .contact-box form button:hover {
             background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.5);
-        }
-
-        .contact-box form button:active {
-            transform: translateY(0);
         }
     </style>
 </head>
@@ -522,13 +379,13 @@
                 <div class="project-card">
                     <h3>Analysis of Non-Fraudulent Contracts</h3>
                     <p>Created an analysis tool for contract validation and inspection.</p>
-                        <a href="https://drive. google.com/file/d/17K6Fm2p2RJRtMZANzL0uJHsXqDitqMs6/view?usp=sharing" class="project-link" target="_blank">View page →</a>
+                        <a href="https://drive.google. com/file/d/17K6Fm2p2RJRtMZANzL0uJHsXqDitqMs6/view?usp=sharing" class="project-link" target="_blank">View page →</a>
                     
                 </div>
 
                 <div class="project-card">
                     <h3>VLS AI Working Group of Ever Olivas: Metaprompts for LEA</h3>
-                    <p>Contributed to AI automation initiatives by developing metaprompts and frameworks.</p>
+                    <p>Contributed to AI automation initiatives by developing metaprompts and frameworks. </p>
                      <a href="https://drive. google.com/file/d/12ed9nTrP3gUoNMfn2kSgexmWSqgmsU5U/view?usp=drive_link" class="project-link" target="_blank">View page →</a>
                      <a href="https://drive.google.com/file/d/1vq88cMLhfT8OmDa8-0zI298sVb57ovTB/view?usp=drive_link" class="project-link" target="_blank">View video →</a>
                 </div>
@@ -541,8 +398,8 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Japanes learning page</h3>
-                    <p>Web page to help in learning japanese. </p>
-                    <a href="https://kanjilist-git-main-alemxrals-projects. vercel.app/index.html" class="project-link" target="_blank">View Page →</a>
+                    <p>Web page to help in learning japanese.</p>
+                    <a href="https://kanjilist-git-main-alemxrals-projects.vercel.app/index.html" class="project-link" target="_blank">View Page →</a>
                      
                     
                 </div>
@@ -560,7 +417,7 @@
     
     <a href="https://www.hashdive.com/Analyze_User? user_address=0xf937dbe9976ac34157b30dd55bdbf248458f6b43&market=Will+Kanye+launch+a+coin+in+February%3F+-+No+%F0%9F%94%B4" class="project-link" target="_blank">View Analysis →</a>
     <p> </p>
-    <p>+ Built a production-grade client for Polymarket/Polygon :REST+ WebSocket utilities, order-book adapters.  Also collaborating in a fast execution (for automated trading), integrating with a custom backend. </p>
+    <p>+ Built a production-grade client for Polymarket/Polygon :REST+ WebSocket utilities, order-book adapters.  Also collaborating in a fast execution (for automated trading), integrating with a custom backend.</p>
 </div>
 
 
@@ -637,7 +494,7 @@
 
 <!-- Script para limpiar el formulario sin enviarlo -->
 <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    document.getElementById('contactForm'). addEventListener('submit', function(event) {
         // Previene la acción de envío por defecto del formulario
         event.preventDefault();
         
