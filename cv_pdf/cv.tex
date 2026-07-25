@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+% ModernCV theme
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+% Character encoding
+\usepackage[utf8]{inputenc}
+% Compact margins for a clean one-page layout
+\usepackage[scale=0.85,top=1.3cm,bottom=1.3cm]{geometry}
+% Colors, flags
+\usepackage{xcolor}
+\usepackage{worldflags}
+\usepackage[
+    pdftitle={CV - Jesus Moral Aranda},
+    pdfauthor={Jesus Moral Aranda},
+    pdfsubject={Curriculum Vitae},
+    pdfkeywords={Physics, Materials Engineering, Python, AI, Nanoscience, Quantitative Finance}
+]{hyperref}
+\hypersetup{colorlinks=true, urlcolor=color1, linkcolor=color1}
+% custom icon for WeChat (not built into moderncv)
+\newcommand*{\wechatsocialsymbol}{\faWeixin}
+% custom icon for YouTube (not built into moderncv)
+\newcommand*{\youtubesocialsymbol}{\faYoutube}
+% shortcut so every flag renders at the exact same box size, regardless of each country's native aspect ratio
+\newcommand*{\cvflag}[1]{\raisebox{0.05cm}{\worldflag[length=0.7cm,width=0.47cm,stretch=1]{#1}}}
+% Personal data
+\firstname{\texorpdfstring{\href{https://jeshopenhauer.github.io/cv/}{Jesus  Moral  Aranda}}{Jesus Moral Aranda}}
+\title{BSc in Physics \& BSc Materials Engineering}
+\mobile{+34 675 94 54 75}
+\social[github]{jeshopenhauer}
+\social[wechat][wechat:jeshopenhauer]{jeshopenhauer}
+\social[youtube]{https://youtu.be/NktT4GF78wQ?si=TpEFa5Zu36n7xgDP}
+\email{jesusmoralaranda10@gmail.com}
+\homepage{jeshopenhauer.github.io/cv}
+\extrainfo{24 years old \\ \href{https://youtu.be/NktT4GF78wQ?si=TpEFa5Zu36n7xgDP}{\textcolor{red}{\Large\faYoutube}}}
+
+% Photo
+\photo[68pt][0.4pt]{profile_photo.jpg}
+\begin{document}
+\makecvtitle
+\vspace{-1.2em}
+\section{Education}
+\cventry{2019--2025\\[5pt]\includegraphics[width=1.5cm]{qr.png}}{BSc in Physics and BSc in Materials Engineering}{\textbf{\textcolor{color1}{University of Seville}}}{Seville, Spain}{}{
+\begin{itemize}
+    \item \textbf{Physics Core:} Developed advanced complex problem-solving abilities and comprehensive laboratory research experience.
+    \item \textbf{Materials Core:} Acquired specialized technical expertise in plastics/polymers, metal corrosion, and semiconductors.
+\end{itemize}
+}
+\cvitem{}{\textbf{BSc Thesis:} \href{https://github.com/jeshopenhauer/cv/raw/main/tfg_jesus_moral_aranda.pdf}{\textit{An\'alisis Estoc\'astico del Arbitraje Financiero}} (Quantitative Finance)}
+\cventry{1 Year}{Computer Science Studies}{\textbf{\textcolor{color1}{East China University of Science and Technology (ECUST)}}}{Shanghai, China}{}{
+\begin{itemize}
+    \item Focused on coursework in Artificial Intelligence and Pattern Recognition algorithms.
+\end{itemize}
+}
+\cventry{1 Year}{Erasmus+ Exchange Program}{\textbf{\textcolor{color1}{Gda\'nsk University of Technology}}}{Gda\'nsk, Poland}{}{
+\begin{itemize}
+    \item Conducted studies at the Nanomaterials Center as part of the Master's program in Nanoscience.
+    \item Utilized the Polish \textit{Kraken} supercomputer for advanced computational tasks and simulations.
+\end{itemize}
+}
+\section{Experience}
+\cventry{2025}{Project Buyer Intern}{\textbf{\textcolor{color1}{Valeo}}}{Martos, Spain}{1 year}{
+\begin{itemize}
+    \item Managed the procurement of plastic components and injection molds for new headlight projects for Skoda and Volkswagen.
+    \item Collaborated with the AI team to develop and implement an artificial intelligence project aimed at automating bureaucratic and administrative processes.
+\end{itemize}
+}
+\cventry{2024}{Materials Engineering Intern}{\textbf{\textcolor{color1}{Smart Materials 3D}}}{Alcal\'a la Real, Spain}{6 months}{
+\begin{itemize}
+    \item Conducted mechanical and thermal characterization to test and validate polymeric materials for FFF/FDM 3D printing in compliance with ISO standards.
+    \item Assisted in the industrial extrusion production line of 3D printing filaments (including PLA, PETG, and technical materials).
+    \end{itemize}}
+\cventry{2021--2022}{Intern}{\textbf{\textcolor{color1}{UBS Europe SE}}}{Luxembourg}{}{\begin{itemize}
+    \item Administrative job.
+\end{itemize}}
+\cventry{2015--2018}{Football Referee}{\textbf{\textcolor{color1}{Royal Spanish Football Federation (RFEF)}}}{Spain}{}{}
+\section{Skills \& Competencies}
+\cvitem{Programming}{Python, Matlab}
+\cvitem{Other Skills}{Laboratory Research Experience, Data Analysis, Quantitative Finance}
+\section{Languages}
+\cvitem{\cvflag{ES}}{Native}
+\cvitem{\cvflag{GB}}{C1 Advanced}
+\cvitem{\cvflag{FR}}{Beginner}
+\cvitem{\cvflag{CN}}{Beginner}
+\end{document}
