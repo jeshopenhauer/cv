@@ -1,0 +1,32 @@
+# LaTeX generated files
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# PDF files (except for tracking specific versions if needed)
+# Uncomment the line below if you want to ignore all PDFs
+# *.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependencies (if using Node.js in future)
+node_modules/
+package-lock.json
+
+# Build outputs (if using Makefile)
+build/
+dist/
